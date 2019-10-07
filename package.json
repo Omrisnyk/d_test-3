@@ -9,7 +9,9 @@
     "dev": "nodemon ./node_modules/.bin/create-deliveroo-tool dev",
     "test": "jest -c ./jest/config.json",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
-    "preinstall": "npx use-yarn -m 'Please use yarn!'"
+    "preinstall": "npx use-yarn -m 'Please use yarn!'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "resolutions": {
     "@types/react": "16.8.23"
@@ -20,7 +22,8 @@
     "dotenv": "^8.0.0",
     "get-port": "^5.0.0",
     "http-proxy-middleware": "^0.19.1",
-    "lodash.get": "^4.4.2"
+    "lodash.get": "^4.4.2",
+    "snyk": "^1.231.1"
   },
   "devDependencies": {
     "@deliveroo/eslint-config": "^2.0.0",
@@ -88,5 +91,6 @@
     "urijs": "^1.19.1",
     "url-parse": "^1.4.7",
     "yup": "^0.27.0"
-  }
+  },
+  "snyk": true
 }
